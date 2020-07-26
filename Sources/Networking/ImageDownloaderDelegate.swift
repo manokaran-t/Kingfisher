@@ -104,19 +104,27 @@ extension ImageDownloaderDelegate {
     public func imageDownloader(
         _ downloader: ImageDownloader,
         willDownloadImageForURL url: URL,
-        with request: URLRequest?) {}
+        with request: URLRequest?) {
+        print("Delegate mehod default implementation")
+    }
 
     public func imageDownloader(
         _ downloader: ImageDownloader,
         didFinishDownloadingImageForURL url: URL,
         with response: URLResponse?,
-        error: Error?) {}
+        error: Error?) {
+        print("Delegate mehod default implementation")
+
+    }
 
     public func imageDownloader(
         _ downloader: ImageDownloader,
         didDownload image: KFCrossPlatformImage,
         for url: URL,
-        with response: URLResponse?) {}
+        with response: URLResponse?) {
+        print("Delegate mehod default implementation")
+
+    }
 
     public func isValidStatusCode(_ code: Int, for downloader: ImageDownloader) -> Bool {
         return (200..<400).contains(code)
